@@ -1,0 +1,33 @@
+acs
+
+//定義関連
+limits 最大最小関数を出せる	
+direction 方角等向きなどの定義	::direction
+
+//計算
+math 計算	::math
+vector ベクトル	::vector
+matrix 行列	::matrix
+
+//データ構造
+range 範囲データ	::range
+
+//IO
+xml xmlパーサーラッパー
+ioSound 音声ファイル入出力ラッパー(追加プロジェクト acs_ioSound)	::ioSound
+ioImage 音声ファイル入出力ラッパー(追加プロジェクト acs_ioImage)	::ioImage
+
+//物理系	::geometory 
+primitive2D 二次元物体	::primitive
+collision2D 二次元衝突判定関数	::collision
+geometory 基本的な物理系まとめ
+
+//物理エンジン
+hc2d 二次元物理エンジン[予定](hc2d.dll)	::hc2D
+
+//ユーティリティ
+timer	ミリ秒タイマー
+safety　スコープ抜けたときの処理がいろいろ
+hash ハッシュ関数いろいろ
+codeset
+
