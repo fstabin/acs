@@ -1,5 +1,5 @@
 #pragma once 
-#include "acs_def.h"
+#include "def.h"
 #include <string.h>
 
 //スコープ終了時の処理簡易化クラス等

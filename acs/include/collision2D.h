@@ -6,8 +6,8 @@
 
 #define _ACS_G_EPSILON2 ACS_G_EPSILON*ACS_G_EPSILON // åÎç∑
 
-#include "acs_def.h"
-#include "acs_primitive2D.h"
+#include "def.h"
+#include "primitive2D.h"
 #include <algorithm>
 namespace acs{
 	namespace geometory {

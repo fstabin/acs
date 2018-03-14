@@ -1,6 +1,6 @@
 #pragma once
-#include "acs_def.h"
-#include "acs_vector.h"
+#include "def.h"
+#include "vector.h"
 namespace acs{
 	namespace geometory {
 		namespace primitive {

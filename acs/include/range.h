@@ -3,8 +3,8 @@
 #include <set>
 #include <algorithm>
 
-#include <acs_attribute.h>
-#include <acs_limits.h>
+#include "attribute.h"
+#include "limits.h"
 
 namespace acs {
 	namespace range {

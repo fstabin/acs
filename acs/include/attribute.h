@@ -11,7 +11,7 @@ namespace acs {
 
 	// Œp³‚µ‚½ƒNƒ‰ƒX‚Ímove‚Å‚«‚È‚¢
 	struct MoveDisable {
-		MoveDisable();
+		MoveDisable() {}
 		MoveDisable& operator=(MoveDisable&&) = delete;
 	};
 

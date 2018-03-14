@@ -28,70 +28,61 @@
     <ClInclude Include="targetver.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="include\acs_import.h">
-      <Filter>ヘッダー ファイル\参照用ヘッダ</Filter>
-    </ClInclude>
-    <ClInclude Include="include\acs_ioImage.h">
-      <Filter>ヘッダー ファイル\参照用ヘッダ</Filter>
-    </ClInclude>
-    <ClInclude Include="include\acs_ioSound.h">
-      <Filter>ヘッダー ファイル\参照用ヘッダ</Filter>
-    </ClInclude>
-    <ClInclude Include="include\acs_limits.h">
-      <Filter>ヘッダー ファイル\参照用ヘッダ</Filter>
-    </ClInclude>
-    <ClInclude Include="include\acs_math.h">
-      <Filter>ヘッダー ファイル\参照用ヘッダ</Filter>
-    </ClInclude>
-    <ClInclude Include="include\acs_matrix.h">
-      <Filter>ヘッダー ファイル\参照用ヘッダ</Filter>
-    </ClInclude>
-    <ClInclude Include="include\acs_primitive2D.h">
-      <Filter>ヘッダー ファイル\参照用ヘッダ</Filter>
-    </ClInclude>
-    <ClInclude Include="include\acs_range.h">
-      <Filter>ヘッダー ファイル\参照用ヘッダ</Filter>
-    </ClInclude>
-    <ClInclude Include="include\acs_safety.h">
-      <Filter>ヘッダー ファイル\参照用ヘッダ</Filter>
-    </ClInclude>
-    <ClInclude Include="include\acs_timer.h">
-      <Filter>ヘッダー ファイル\参照用ヘッダ</Filter>
-    </ClInclude>
-    <ClInclude Include="include\acs_vector.h">
-      <Filter>ヘッダー ファイル\参照用ヘッダ</Filter>
-    </ClInclude>
-    <ClInclude Include="include\acs_xml.h">
-      <Filter>ヘッダー ファイル\参照用ヘッダ</Filter>
-    </ClInclude>
-    <ClInclude Include="include\acsffff.h">
-      <Filter>ヘッダー ファイル\参照用ヘッダ</Filter>
-    </ClInclude>
     <ClInclude Include="include\acs.h">
       <Filter>ヘッダー ファイル\参照用ヘッダ</Filter>
     </ClInclude>
-    <ClInclude Include="include\acs_attribute.h">
+    <ClInclude Include="include\attribute.h">
       <Filter>ヘッダー ファイル\参照用ヘッダ</Filter>
     </ClInclude>
-    <ClInclude Include="include\acs_codeset.h">
+    <ClInclude Include="include\codeset.h">
       <Filter>ヘッダー ファイル\参照用ヘッダ</Filter>
     </ClInclude>
-    <ClInclude Include="include\acs_collision2D.h">
+    <ClInclude Include="include\collision2D.h">
       <Filter>ヘッダー ファイル\参照用ヘッダ</Filter>
     </ClInclude>
-    <ClInclude Include="include\acs_def.h">
+    <ClInclude Include="include\def.h">
       <Filter>ヘッダー ファイル\参照用ヘッダ</Filter>
     </ClInclude>
-    <ClInclude Include="include\acs_direction.h">
+    <ClInclude Include="include\direction.h">
       <Filter>ヘッダー ファイル\参照用ヘッダ</Filter>
     </ClInclude>
-    <ClInclude Include="include\acs_geometory.h">
+    <ClInclude Include="include\geometory.h">
       <Filter>ヘッダー ファイル\参照用ヘッダ</Filter>
     </ClInclude>
-    <ClInclude Include="include\acs_hash.h">
+    <ClInclude Include="include\hash.h">
       <Filter>ヘッダー ファイル\参照用ヘッダ</Filter>
     </ClInclude>
-    <ClInclude Include="include\acs_hc2d.h">
+    <ClInclude Include="include\hc2d.h">
+      <Filter>ヘッダー ファイル\参照用ヘッダ</Filter>
+    </ClInclude>
+    <ClInclude Include="include\import.h">
+      <Filter>ヘッダー ファイル\参照用ヘッダ</Filter>
+    </ClInclude>
+    <ClInclude Include="include\limits.h">
+      <Filter>ヘッダー ファイル\参照用ヘッダ</Filter>
+    </ClInclude>
+    <ClInclude Include="include\math.h">
+      <Filter>ヘッダー ファイル\参照用ヘッダ</Filter>
+    </ClInclude>
+    <ClInclude Include="include\matrix.h">
+      <Filter>ヘッダー ファイル\参照用ヘッダ</Filter>
+    </ClInclude>
+    <ClInclude Include="include\primitive2D.h">
+      <Filter>ヘッダー ファイル\参照用ヘッダ</Filter>
+    </ClInclude>
+    <ClInclude Include="include\range.h">
+      <Filter>ヘッダー ファイル\参照用ヘッダ</Filter>
+    </ClInclude>
+    <ClInclude Include="include\safety.h">
+      <Filter>ヘッダー ファイル\参照用ヘッダ</Filter>
+    </ClInclude>
+    <ClInclude Include="include\timer.h">
+      <Filter>ヘッダー ファイル\参照用ヘッダ</Filter>
+    </ClInclude>
+    <ClInclude Include="include\vector.h">
+      <Filter>ヘッダー ファイル\参照用ヘッダ</Filter>
+    </ClInclude>
+    <ClInclude Include="include\xml.h">
       <Filter>ヘッダー ファイル\参照用ヘッダ</Filter>
     </ClInclude>
   </ItemGroup>

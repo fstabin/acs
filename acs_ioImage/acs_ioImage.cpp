@@ -2,8 +2,8 @@
 //
 
 #include "stdafx.h"
-#include "acs_ioImage.h"
-#include "AtDef.h"
+#include "include\acs_ioImage.h"
+#include "acs\include\def.h"
 
 #include<wincodec.h>
 #include<atlcomcli.h>

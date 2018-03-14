@@ -6,8 +6,8 @@
 #endif
 
 
-#include "acs_dimension.h"
-#include "acs_safety.h"
+#include "dimension.h"
+#include "safety.h"
 
 namespace acs {
 	//HitChcker2d

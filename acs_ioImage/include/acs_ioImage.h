@@ -5,7 +5,7 @@
 #define ACS_IOIMAGE_API __declspec(dllimport)
 #endif
 #include <exception>
-#include <acs_def.h>
+#include "acs\include\def.h"
 //use acs_ioImage.lib 
 //			& acs_ioImage.dll
 
