@@ -64,10 +64,11 @@ namespace acs {
 		constexpr SIACS(T*const& ip) noexcept :p(ip) {
 			Addref();
 		}
-		constexpr SIACS(SIACS<T>const& ip) noexcept : p(ip.p) {
+		constexpr SIACS(type const& ip) noexcept : p(ip.p) {
 			Addref();
 		}
-		constexpr SIACS(T*&& ip) noexcept : p(ip) {
+		constexpr SIACS(type&& ip) noexcept : p(ip->p) {
+
 		}
 		inline ~SIACS() {
 			if(p)p->Release();
@@ -106,10 +107,15 @@ namespace acs {
 			Addref();
 			return *this;
 		}
-		inline SIACS& operator= (SIACS&ip) noexcept {
+		inline SIACS& operator= (const type&ip) noexcept {
 			Relase();
 			p = ip;
 			Addref();
+			return *this;
+		}
+		inline SIACS& operator= (type&&ip) noexcept {
+			Relase();
+			p = ip.p;
 			return *this;
 		}
 		inline T* operator-> ()const noexcept {

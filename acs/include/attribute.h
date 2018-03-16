@@ -5,13 +5,22 @@ namespace acs {
 	// 継承したクラスはコピーできない
 	struct CopyDisable {
 		CopyDisable() {};
+
+		//コピー不可
 		CopyDisable& operator=(CopyDisable&) = delete; 
 		CopyDisable(CopyDisable&) = delete;
+
+		//移動可能
+		CopyDisable& operator=(CopyDisable&&) = default;
+		CopyDisable(CopyDisable&&) = default;
 	};
 
 	// 継承したクラスはmoveできない
 	struct MoveDisable {
 		MoveDisable() {}
+
+		//移動不可能
+		MoveDisable(MoveDisable&&) = delete;
 		MoveDisable& operator=(MoveDisable&&) = delete;
 	};
 

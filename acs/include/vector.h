@@ -41,57 +41,53 @@ namespace acs {
 			Vector2D() : x(), y() {};
 			Vector2D(T _x, T _y) : x(_x), y(_y) {};
 			Vector2D(const Vector2D& v) : x(v.x), y(v.y) {};
-			inline Vector2D ACS_FCALL operator+(Vector2D v)const noexcept {
+			inline Vector2D  operator+(Vector2D v)const noexcept {
 				return Vector2D(x + v.x, y + v.y);
 			}
-			inline Vector2D ACS_FCALL operator-(Vector2D v)const noexcept {
+			inline Vector2D  operator-(Vector2D v)const noexcept {
 				return Vector2D(x - v.x, y - v.y);
 			}
-			inline Vector2D ACS_FCALL operator*(T v)const noexcept {
+			inline Vector2D  operator*(T v)const noexcept {
 				return Vector2D(x * v, y * v);
 			}
-			inline Vector2D ACS_FCALL operator/(T v)const noexcept {
+			inline Vector2D  operator/(T v)const noexcept {
 				return Vector2D(x / v, y / v);
 			}
 			
-			inline Vector2D& ACS_FCALL operator+=(Vector2D v) noexcept {
+			inline Vector2D&  operator+=(Vector2D v) noexcept {
 				x += v.x;
 				y += v.y;
 				return *this;
 			}
-			inline Vector2D& ACS_FCALL operator-=(Vector2D v) noexcept {
+			inline Vector2D&  operator-=(Vector2D v) noexcept {
 				x -= v.x;
 				y -= v.y;
 				return *this;
 			}
-			inline Vector2D& ACS_FCALL operator*=(T v) noexcept {
+			inline Vector2D&  operator*=(T v) noexcept {
 				x *= v;
 				y *= v;
 				return *this;
 			}
-			inline Vector2D& ACS_FCALL operator/=(T v) noexcept {
+			inline Vector2D&  operator/=(T v) noexcept {
 				x /= v;
 				y /= v;
 				return *this;
 			}
 
-			inline Vector2D ACS_FCALL operator-() noexcept {
+			inline Vector2D  operator-() noexcept {
 				return Vector2D(-x, -y);
 			}
 
-			inline Vector2D& ACS_FCALL operator=(Vector2D v) noexcept {
-				x = v.x; y = v.y;
-				return *this;
-			}
-			inline bool ACS_FCALL operator==(const Vector2D& v)const noexcept {
+			inline bool  operator==(const Vector2D& v)const noexcept {
 				return x == v.x && y == v.y;
 			}
 
-			inline T& ACS_FCALL operator[](size_t i) noexcept {
+			inline T&  operator[](size_t i) noexcept {
 				auto p = reinterpret_cast<T*>(this);
 				return p[i];
 			}
-			inline const T& ACS_FCALL operator[](size_t i)const noexcept {
+			inline const T&  operator[](size_t i)const noexcept {
 				auto p = reinterpret_cast<const T*>(this);
 				return p[i];
 			}
@@ -112,69 +108,69 @@ namespace acs {
 			Vector3D(T _x, T _y, T _z) : x(_x), y(_y), z(_z) {};
 			Vector3D(Vector2D<T> _xy, T _z) : x(_xy.x), y(_xy.y), z(_z) {};
 			Vector3D(T _x, Vector2D<T> _yz) : x(_x), y(_yz.x), z(_yz.y) {};
-			Vector3D(const Vector3D& v) : x(v.x), y(v.y), z(v.z) {};
+			Vector3D(const Vector3D& v) = default;
+			Vector3D(Vector3D&& v) = default;
 
-			Vector2D<T> ACS_FCALL xy() {
+			Vector3D& operator=(const Vector3D& v) = default;
+			Vector3D& operator=(Vector3D&& v) = default;
+
+			Vector2D<T>  xy() {
 				return Vector2D<T>(x, y);
 			}
-			Vector2D<T> ACS_FCALL yz() {
+			Vector2D<T>  yz() {
 				return Vector2D<T>(y, z);
 			}
 
-			inline Vector3D ACS_FCALL operator+(Vector3D v)const noexcept {
+			inline Vector3D  operator+(Vector3D v)const noexcept {
 				return Vector3D(x + v.x, y + v.y, z + v.z);
 			}
-			inline Vector3D ACS_FCALL operator-(Vector3D v)const noexcept {
+			inline Vector3D  operator-(Vector3D v)const noexcept {
 				return Vector3D(x - v.x, y - v.y, z - v.z);
 			}
-			inline Vector3D ACS_FCALL operator*(T v)const noexcept {
+			inline Vector3D  operator*(T v)const noexcept {
 				return Vector3D(x * v, y * v, z * v);
 			}
-			inline Vector3D ACS_FCALL operator/(T v)const noexcept {
+			inline Vector3D  operator/(T v)const noexcept {
 				return Vector3D(x / v, y / v, z / v);
 			}
 
-			inline Vector3D& ACS_FCALL operator+=(Vector3D v) noexcept {
+			inline Vector3D&  operator+=(Vector3D v) noexcept {
 				x += v.x;
 				y += v.y;
 				z += v.z;
 				return *this;
 			}
-			inline Vector3D& ACS_FCALL operator-=(Vector3D v) noexcept {
+			inline Vector3D&  operator-=(Vector3D v) noexcept {
 				x -= v.x;
 				y -= v.y;
 				z -= v.z;
 				return *this;
 			}
-			inline Vector3D& ACS_FCALL operator*=(T v) noexcept {
+			inline Vector3D&  operator*=(T v) noexcept {
 				x *= v;
 				y *= v;
 				z *= v;
 				return *this;
 			}
-			inline Vector3D& ACS_FCALL operator/=(T v)noexcept {
+			inline Vector3D&  operator/=(T v)noexcept {
 				x /= v;
 				y /= v;
 				z /= v;
 				return *this;
 			}
 
-			inline Vector3D ACS_FCALL operator-() noexcept {
+			inline Vector3D  operator-() noexcept {
 				return Vector3D(-x, -y, -z);
 			}
 
-			inline Vector3D& ACS_FCALL operator=(Vector3D v) noexcept {
-				x = v.x; y = v.y;z = v.z;
-				return *this;
-			}
-			inline bool ACS_FCALL operator==(Vector3D v) noexcept {
+			inline bool  operator==(Vector3D v) noexcept {
 				return x == v.x && y == v.y && z == v.z;
 			}
-			inline T& ACS_FCALL operator[](size_t i)noexcept {
+			inline T&  operator[](size_t i)noexcept {
 				auto p = reinterpret_cast<T*>(this);
 				return p[i];
 			}
-			inline const T& ACS_FCALL operator[](size_t i)const noexcept {
+			inline const T&  operator[](size_t i)const noexcept {
 				auto p = reinterpret_cast<const T*>(this);
 				return p[i];
 			}
@@ -194,41 +190,41 @@ namespace acs {
 			Vector4D()noexcept : x(), y(), z(), w() {};
 			Vector4D(T _x, T _y, T _z, T _w) noexcept: x(_x), y(_y), z(_z), w(_w) {};
 			Vector4D(const Vector4D& v)noexcept : x(v.x), y(v.y), z(v.z), w(v.w) {};
-			inline Vector4D ACS_FCALL operator+(Vector4D v)const noexcept {
+			inline Vector4D  operator+(Vector4D v)const noexcept {
 				return Vector4D(x + v.x, y + v.y, z + v.z, w + v.w);
 			}
-			inline Vector4D ACS_FCALL operator-(Vector4D v)const noexcept {
+			inline Vector4D  operator-(Vector4D v)const noexcept {
 				return Vector4D(x - v.x, y - v.y, z - v.z, w - v.w);
 			}
-			inline Vector4D ACS_FCALL operator*(T v)const noexcept {
+			inline Vector4D  operator*(T v)const noexcept {
 				return Vector4D(x * v, y * v, z * v,w *v);
 			}
-			inline Vector4D ACS_FCALL operator/(T v)const noexcept {
+			inline Vector4D  operator/(T v)const noexcept {
 				return Vector4D(x / v, y / v, z / v, w / v);
 			}
 
-			inline Vector4D& ACS_FCALL operator+=(Vector4D v) noexcept {
+			inline Vector4D&  operator+=(Vector4D v) noexcept {
 				x += v.x;
 				y += v.y;
 				z += v.z;
 				w += v.w;
 				return *this;
 			}
-			inline Vector4D& ACS_FCALL operator-=(Vector4D v)noexcept {
+			inline Vector4D&  operator-=(Vector4D v)noexcept {
 				x -= v.x;
 				y -= v.y;
 				z -= v.z;
 				w -= v.w;
 				return *this;
 			}
-			inline Vector4D& ACS_FCALL operator*=(T v)noexcept {
+			inline Vector4D&  operator*=(T v)noexcept {
 				x *= v;
 				y *= v;
 				z *= v;
 				w *= v;
 				return *this;
 			}
-			inline Vector4D& ACS_FCALL operator/=(T v) noexcept {
+			inline Vector4D&  operator/=(T v) noexcept {
 				x /= v;
 				y /= v;
 				z /= v;
@@ -236,22 +232,22 @@ namespace acs {
 				return *this;
 			}
 
-			inline Vector4D ACS_FCALL operator-()noexcept {
+			inline Vector4D  operator-()noexcept {
 				return Vector4D(-x, -y, -z, -w);
 			}
 
-			inline Vector4D& ACS_FCALL operator=(Vector4D v) noexcept {
+			inline Vector4D&  operator=(Vector4D v) noexcept {
 				x = v.x; y = v.y;z = v.z;w = v.w;
 				return *this;
 			}
-			inline bool ACS_FCALL operator==(Vector4D v) noexcept {
+			inline bool  operator==(Vector4D v) noexcept {
 				return x == v.x && y == v.y && z == v.z && w == v.w;
 			}
-			inline T& ACS_FCALL operator[](size_t i) noexcept {
+			inline T&  operator[](size_t i) noexcept {
 				auto p = reinterpret_cast<T*>(this);
 				return p[i];
 			}
-			inline const T& ACS_FCALL operator[](size_t i)const noexcept {
+			inline const T&  operator[](size_t i)const noexcept {
 				auto p = reinterpret_cast<const T*>(this);
 				return p[i];
 			}
