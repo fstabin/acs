@@ -2,12 +2,9 @@
 //
 
 #include "stdafx.h"
-#include <>
-
+#include "test.h"
 int main()
 {
-
-
-    return 0;
+	return range_test();
 }
 
