@@ -11,6 +11,7 @@
 namespace acs {
 	namespace range {
 		enum Condition :char{
+			None = -1,
 			Less = 0,
 			LessEqual = 1,
 			Equal = 2,
@@ -646,70 +647,6 @@ namespace acs {
 			bool isWhole()const {
 				return mIsWhole;
 			}
-
-			void streamWrite(std::ostream& os) {
-				if (this->mIsWhole) {
-					os << "whole";
-				}
-				else if (mTree.empty()) {
-					os << "empty";
-				}
-				else {
-					auto iter = mTree.begin();
-					while (iter != mTree.end()) {
-						auto c = *iter;
-						++iter;
-						switch (c.second)
-						{
-						case acs::range::Less:
-							os << "<" << c.first;
-							if (iter != mTree.end())os << ",";
-							break;
-						case acs::range::Grater:
-							os << c.first << "<";
-							break;
-						case acs::range::Equal:
-							os << c.first;
-							if (iter != mTree.end())os << ",";
-							break;
-						default:
-							break;
-						}
-					}
-				}
-			}
-
-			void wstreamWrite(std::wostream& os) {
-				if (this->mIsWhole) {
-					os << "whole";
-				}
-				else if (mTree.empty()) {
-					os << "empty";
-				}
-				else {
-					auto iter = mTree.begin();
-					while (iter != mTree.end()) {
-						auto c = *iter;
-						++iter;
-						switch (c.second)
-						{
-						case acs::range::Less:
-							os << "<" << c.first;
-							if (iter != mTree.end())os << ",";
-							break;
-						case acs::range::Grater:
-							os << c.first << "<";
-							break;
-						case acs::range::Equal:
-							os << c.first;
-							if (iter != mTree.end())os << ",";
-							break;
-						default:
-							break;
-						}
-					}
-				}
-			}
 		};
 
 		//ƒ^ƒCƒv
@@ -1190,6 +1127,51 @@ namespace acs {
 					return std::move(r);
 				}
 			}
+		
+		private:
+			template <typename ostreamType>
+			void prStreamWrite(ostreamType& os) {
+				if (this->mIsWhole) {
+					os << "whole";
+				}
+				else if (mTree.empty()) {
+					os << "empty";
+				}
+				else {
+					auto iter = mTree.begin();
+					auto beforeType = Condition::None;
+					while (iter != mTree.end()) {
+						auto c = *iter;
+						++iter;
+						switch (c.second)
+						{
+						case acs::range::Less:
+							if (beforeType == Condition::Grater)os << "...";
+							os << c.first;
+							if (iter != mTree.end())os << ",";
+							break;
+						case acs::range::Grater:
+							os << c.first << "...";
+							break;
+						case acs::range::Equal:
+							os << c.first;
+							if (iter != mTree.end())os << ",";
+							break;
+						default:
+							break;
+						}
+					}
+				}
+			}
+
+		public:
+			void streamWrite(std::ostream& os) {
+				prStreamWrite(os);
+			}
+
+			void streamWrite(std::wostream& os) {
+				prStreamWrite(os);
+			}
 		};
 
 		//floatŒ^
@@ -1660,6 +1642,70 @@ namespace acs {
 					r.mIsWhole = false;
 					r.mTree = std::move(conditions);
 					return std::move(r);
+				}
+			}
+		
+			void streamWrite(std::ostream& os) {
+				if (this->mIsWhole) {
+					os << "whole";
+				}
+				else if (mTree.empty()) {
+					os << "empty";
+				}
+				else {
+					auto iter = mTree.begin();
+					while (iter != mTree.end()) {
+						auto c = *iter;
+						++iter;
+						switch (c.second)
+						{
+						case acs::range::Less:
+							os << "<" << c.first;
+							if (iter != mTree.end())os << ",";
+							break;
+						case acs::range::Grater:
+							os << c.first << "<";
+							break;
+						case acs::range::Equal:
+							os << c.first;
+							if (iter != mTree.end())os << ",";
+							break;
+						default:
+							break;
+						}
+					}
+				}
+			}
+
+			void streamWrite(std::wostream& os) {
+				if (this->mIsWhole) {
+					os << "whole";
+				}
+				else if (mTree.empty()) {
+					os << "empty";
+				}
+				else {
+					auto iter = mTree.begin();
+					while (iter != mTree.end()) {
+						auto c = *iter;
+						++iter;
+						switch (c.second)
+						{
+						case acs::range::Less:
+							os << "<" << c.first;
+							if (iter != mTree.end())os << ",";
+							break;
+						case acs::range::Grater:
+							os << c.first << "<";
+							break;
+						case acs::range::Equal:
+							os << c.first;
+							if (iter != mTree.end())os << ",";
+							break;
+						default:
+							break;
+						}
+					}
 				}
 			}
 		};
