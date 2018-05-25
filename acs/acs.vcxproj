@@ -147,7 +147,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <Text Include="acsメモ.txt" />
-    <Text Include="ReadMe.txt" />
+    <Text Include="include\acsの例外.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\acs.h" />
@@ -166,6 +166,8 @@
     <ClInclude Include="include\primitive2D.h" />
     <ClInclude Include="include\range.h" />
     <ClInclude Include="include\safety.h" />
+    <ClInclude Include="include\sock.h" />
+    <ClInclude Include="include\stopwatch.h" />
     <ClInclude Include="include\timer.h" />
     <ClInclude Include="include\vector.h" />
     <ClInclude Include="include\xml.h" />

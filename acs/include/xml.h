@@ -1,10 +1,12 @@
 #pragma once
-#include <comdef.h>
-#include <MsXml6.h> 
-#include <atlutil.h>
 #include <functional>
 #include <stack>
 #include <algorithm>
+
+#include <comdef.h>
+#include <MsXml6.h> 
+#include <atlutil.h>
+
 #pragma comment(lib, "MsXml6.lib")
 
 #define HR_CHECK(hr) if(FAILED(hr))return false;

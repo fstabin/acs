@@ -18,8 +18,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="ReadMe.txt" />
     <Text Include="acsメモ.txt" />
+    <Text Include="include\acsの例外.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -83,6 +83,12 @@
       <Filter>ヘッダー ファイル\参照用ヘッダ</Filter>
     </ClInclude>
     <ClInclude Include="include\xml.h">
+      <Filter>ヘッダー ファイル\参照用ヘッダ</Filter>
+    </ClInclude>
+    <ClInclude Include="include\stopwatch.h">
+      <Filter>ヘッダー ファイル\参照用ヘッダ</Filter>
+    </ClInclude>
+    <ClInclude Include="include\sock.h">
       <Filter>ヘッダー ファイル\参照用ヘッダ</Filter>
     </ClInclude>
   </ItemGroup>

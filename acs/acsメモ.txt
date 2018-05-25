@@ -25,8 +25,11 @@ geometory 基本的な物理系まとめ
 //物理エンジン
 hc2d 二次元物理エンジン[予定](hc2d.dll)	::hc2D
 
+//時計(clock名前空間)
+timer	タイマー
+stopwhatch ストップウォッチ
+
 //ユーティリティ
-timer	ミリ秒タイマー
 safety　スコープ抜けたときの処理がいろいろ
 hash ハッシュ関数いろいろ
 codeset
